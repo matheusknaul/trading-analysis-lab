@@ -1,11 +1,10 @@
 import yfinance as yf
 import pandas as pd
 
-
 nome_acao = "ITUB4.SA"
 
 # Baixa os dados do pregão anterior (19/05)
-df = yf.download(nome_acao, start="2025-05-18", end="2025-05-20", interval="1m")
+df = yf.download(nome_acao, start="2015-05-22", end="2025-05-22", interval="1m")
 
 # Preço de fechamento do dia 19/05
 close_prev = df['Close'].iloc[0]
